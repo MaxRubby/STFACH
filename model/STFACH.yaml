@@ -1,0 +1,142 @@
+ 
+PEMS04:
+  data_col: ["traffic_flow"]
+  num_nodes: 307
+  in_steps: 12
+  out_steps: 12
+
+  train_size: 0.6
+  val_size: 0.2
+  time_of_day: True
+  day_of_week: True
+  lr: 0.001
+  weight_decay: 0.0005
+  milestones: [30, 50, 75]  
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 200
+  early_stop: 50
+  use_cl: False
+  cl_step_size: 6370
+
+  model_args:
+    input_dim: 4 
+    output_channels : 1
+    embed_dim: 64
+    num_layers: 2
+    add_day_in_week: True
+    add_time_in_day : True
+    hid_dim : 64
+    hid_hid_dim : 64
+    atol: 1.0e-9
+    rtol: 1.0e-7
+    solver: 'euler'
+    num_nodes: 307
+    in_steps: 12
+    out_steps: 12
+   
+
+PEMS07:
+  data_col: ["traffic_flow"]
+  num_nodes: 883
+  in_steps: 12
+  out_steps: 12
+  train_size: 0.6
+  val_size: 0.2
+  time_of_day: True
+  day_of_week: True
+  lr: 0.001
+  weight_decay: 0.001
+  milestones: [30, 50, 75] 
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 300
+  early_stop: 20
+  use_cl: False
+  cl_step_size: 2500
+
+  model_args:
+    input_dim: 4
+    output_channels : 1
+    embed_dim: 64
+    num_layers: 2
+    add_day_in_week: True
+    add_time_in_day : True
+    hid_dim : 64
+    hid_hid_dim : 64
+    atol: 1.0e-9
+    rtol: 1.0e-7
+    solver: 'euler'
+    num_nodes: 883
+    in_steps: 12
+    out_steps: 12
+    
+PEMS08:
+  data_col: ["traffic_flow"]
+  num_nodes: 170
+  in_steps: 12
+  out_steps: 12
+  train_size: 0.6
+  val_size: 0.2
+  time_of_day: True
+  day_of_week: True
+  lr: 0.001
+  weight_decay: 0.0015
+  milestones: [25, 45, 65]
+  lr_decay_rate: 0.1
+  batch_size: 16
+  max_epochs: 200
+  early_stop: 50
+  use_cl: False
+  cl_step_size: 2500
+
+  model_args:
+    input_dim: 4
+    output_channels : 1
+    embed_dim: 64
+    num_layers: 2
+    add_day_in_week: True
+    add_time_in_day : True
+    hid_dim : 64
+    hid_hid_dim : 64
+    atol: 1.0e-9
+    rtol: 1.0e-7
+    solver: 'euler'
+    num_nodes: 170
+    in_steps: 12
+    out_steps: 12
+     
+
+PEMS03:
+  data_col: ["traffic_flow"]
+  num_nodes: 358
+  in_steps: 12
+  out_steps: 12
+  train_size: 0.6
+  val_size: 0.2
+  time_of_day: True
+  day_of_week: True
+  lr: 0.001
+  weight_decay: 0.0005
+  milestones: [30, 50, 65] 
+  lr_decay_rate: 0.1
+  batch_size: 32
+  max_epochs: 300
+  early_stop: 20
+  use_cl: False
+  cl_step_size: 2500
+  model_args:
+    input_dim: 4
+    output_channels : 1
+    embed_dim: 64
+    num_layers: 2
+    add_day_in_week: True
+    add_time_in_day : True
+    hid_dim : 64
+    hid_hid_dim : 64
+    atol: 1.0e-9
+    rtol: 1.0e-7
+    solver: 'euler'
+    num_nodes: 358
+    in_steps: 12
+    out_steps: 12
